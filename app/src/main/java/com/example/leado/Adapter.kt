@@ -27,6 +27,7 @@ class Adapter(val list:ArrayList<People>) : RecyclerView.Adapter<Adapter.viewHol
         holder.personName.text=part.name
         holder.Score.text=part.score.toString()+" "+"Points"
         holder.Rank.text=part.Rank.toString()
+        holder.image.setImageResource(part.image)
         if(part.Rank==1){
             holder.itemm.setBackgroundColor(Color.parseColor("#22d0c4"))
             holder.Rank.setBackgroundResource(R.drawable.first)
@@ -35,6 +36,7 @@ class Adapter(val list:ArrayList<People>) : RecyclerView.Adapter<Adapter.viewHol
         if(part.Rank==2||part.Rank==3){
             holder.Rank.setBackgroundResource(R.drawable.second_third)
             holder.Rank.setTextColor(Color.parseColor("#22d0c4"))
+
         }
     }
 
@@ -43,5 +45,6 @@ class Adapter(val list:ArrayList<People>) : RecyclerView.Adapter<Adapter.viewHol
         val Score: TextView =itemView.textView12
         val Rank: TextView =itemView.textView14
         val itemm=itemView.item
+        val image=itemView.imageView9
     }
 }
