@@ -1,15 +1,13 @@
 package com.example.leado
 
 import android.content.Intent
-import android.graphics.Color
 import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.leado.adapters.PeoplesAdapter
+import com.example.leado.models.People
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_friend.*
 import kotlinx.android.synthetic.main.activity_leaderboard.*
-import kotlinx.android.synthetic.main.activity_leaderboard.bottom_navigation
-import kotlinx.android.synthetic.main.item.*
 
 class Leaderboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,20 +15,61 @@ class Leaderboard : AppCompatActivity() {
         setContentView(R.layout.activity_leaderboard)
         supportActionBar?.hide()
         leaderbord.paintFlags= Paint.UNDERLINE_TEXT_FLAG
-        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         val z=getPeople()
-        val adapter=Adapter(z)
+        val adapter= PeoplesAdapter(z)
         main_recycler.adapter=adapter
 
     }
     fun getPeople():ArrayList<People>{
         val p:ArrayList<People> = ArrayList()
-        p.add(People("Aborayes",193.222,1,R.drawable.das))
-        p.add(People("Etch",191.222,2,R.drawable.das))
-        p.add(People("Kirdy",190.222,3,R.drawable.das))
-        p.add(People("Omda",189.222,4,R.drawable.das))
-        p.add(People("Zizo",188.222,5,R.drawable.das))
-        p.add(People("Assoum",160.222,6,R.drawable.das))
+        p.add(
+            People(
+                "Aborayes",
+                193.222,
+                1,
+                R.drawable.das
+            )
+        )
+        p.add(
+            People(
+                "Etch",
+                191.222,
+                2,
+                R.drawable.das
+            )
+        )
+        p.add(
+            People(
+                "Kirdy",
+                190.222,
+                3,
+                R.drawable.das
+            )
+        )
+        p.add(
+            People(
+                "Omda",
+                189.222,
+                4,
+                R.drawable.das
+            )
+        )
+        p.add(
+            People(
+                "Zizo",
+                188.222,
+                5,
+                R.drawable.das
+            )
+        )
+        p.add(
+            People(
+                "Assoum",
+                160.222,
+                6,
+                R.drawable.das
+            )
+        )
         return p
     }
 
@@ -54,7 +93,7 @@ class Leaderboard : AppCompatActivity() {
             R.id.user -> {
                 item.isChecked
                 item.setEnabled(true)
-                val intent= Intent(this,Friend::class.java)
+                val intent= Intent(this,Profile::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }

@@ -10,7 +10,7 @@ import com.example.leado.models.Course
 import kotlinx.android.synthetic.main.course_item.view.*
 
 
-class Adapter(private var items: List<Course>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
+class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
     {

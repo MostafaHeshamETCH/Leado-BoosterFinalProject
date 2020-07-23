@@ -1,20 +1,20 @@
-package com.example.leado
+package com.example.leado.adapters
 
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item.*
-import kotlinx.android.synthetic.main.item.view.*
-import kotlinx.android.synthetic.main.item.view.item
+import com.example.leado.models.People
+import com.example.leado.R
+import kotlinx.android.synthetic.main.user_item.view.*
+import kotlinx.android.synthetic.main.user_item.view.item
 
-class Adapter(val list:ArrayList<People>) : RecyclerView.Adapter<Adapter.viewHolder>() {
+class PeoplesAdapter(val list:ArrayList<People>) : RecyclerView.Adapter<PeoplesAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-       val layoutinflater=LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false)
+       val layoutinflater=LayoutInflater.from(parent.context).inflate(R.layout.user_item,parent,false)
         return viewHolder(layoutinflater)
     }
 
