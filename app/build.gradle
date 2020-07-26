@@ -74,4 +74,8 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$archLifeStyleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$archLifeStyleVersion"
 
+    //Circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.alexzh:circleimageview:1.2.0'
+
 }
