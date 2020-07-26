@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.models.People
 import com.example.leado.R
 import kotlinx.android.synthetic.main.user_item.view.*
-import kotlinx.android.synthetic.main.user_item.view.item
 
 class PeoplesAdapter(val list:ArrayList<People>) : RecyclerView.Adapter<PeoplesAdapter.viewHolder>() {
 
@@ -29,7 +28,7 @@ class PeoplesAdapter(val list:ArrayList<People>) : RecyclerView.Adapter<PeoplesA
         holder.Rank.text=part.Rank.toString()
         holder.image.setImageResource(part.image)
         if(part.Rank==1){
-            holder.itemm.setBackgroundColor(Color.parseColor("#22d0c4"))
+            //holder.itemm.setBackgroundColor(Color.parseColor("#22d0c4"))
             holder.Rank.setBackgroundResource(R.drawable.first)
             holder.Rank.setTextColor(Color.parseColor("#1f314a"))
         }
@@ -44,7 +43,7 @@ class PeoplesAdapter(val list:ArrayList<People>) : RecyclerView.Adapter<PeoplesA
         val personName: TextView =itemView.name
         val Score: TextView =itemView.textView12
         val Rank: TextView =itemView.textView14
-        val itemm=itemView.item
+        //val itemm=itemView.item
         val image=itemView.imageView9
     }
 }
