@@ -18,7 +18,8 @@ class Adapter(val list:ArrayList<People>) : RecyclerView.Adapter<Adapter.viewHol
         return viewHolder(layoutinflater)
     }
 
-    override fun getItemCount(): Int {
+    override fun getItemCount(): Int
+    {
         return list.size
     }
 

@@ -17,7 +17,7 @@ class Leaderboard : AppCompatActivity() {
         setContentView(R.layout.activity_leaderboard)
         supportActionBar?.hide()
         leaderbord.paintFlags= Paint.UNDERLINE_TEXT_FLAG
-        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
         val z=getPeople()
         val adapter=Adapter(z)
         main_recycler.adapter=adapter

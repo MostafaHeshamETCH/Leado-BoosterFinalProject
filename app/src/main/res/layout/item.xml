@@ -13,11 +13,9 @@
         android:id="@+id/imageView9"
         android:layout_width="90dp"
         android:layout_height="90dp"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_launcher_foreground">
-
     </ImageView>
 
     <TextView
