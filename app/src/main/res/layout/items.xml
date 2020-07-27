@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dp"
+    android:layout_marginStart="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="85dp"
+
+            android:gravity="center"
+            android:text="Support\nSystem"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lesson_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Lesson 1"
+            android:textSize="21sp"
+            android:gravity="center"
+            android:layout_marginStart="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="170dp"
+        android:gravity="center"
+        android:text="building an integral\nSupport system\n Pushes you to grow\nStrech more, Mainly asks\nWhy things wont work\nand bullet proofs idea"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="235dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/btn_round"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="25dp"
+
+
+        />
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

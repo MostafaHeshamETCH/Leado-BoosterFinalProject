@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Friend"
-    android:background="#d2fcfa"
-    >
+    android:background="@drawable/bg"
+    tools:context=".Profile">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -272,24 +272,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/icon4" />
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="409dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-        <!-- Main content -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="412dp"
-            android:layout_height="41dp"
-            android:layout_gravity="bottom"
-            android:background="#d2fcfa"
-            app:itemIconTint="@android:color/darker_gray"
-            app:itemTextColor="@android:color/black"
-            app:menu="@menu/bottom_navigation_menu"
 
-            />
-    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="unlabeled"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

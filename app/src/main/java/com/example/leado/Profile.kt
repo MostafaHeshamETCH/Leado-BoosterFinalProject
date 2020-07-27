@@ -7,12 +7,11 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_friend.*
 
-class Friend : AppCompatActivity() {
+class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friend)
         supportActionBar?.hide()
-        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
     }
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
