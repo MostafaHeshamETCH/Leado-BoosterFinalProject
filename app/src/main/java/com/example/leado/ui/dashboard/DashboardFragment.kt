@@ -40,8 +40,8 @@ class DashboardFragment : Fragment() {
         image3.setImageResource(third_img)
         val Part_List=Full_List
         Part_List.removeAt(0)
-        Part_List.removeAt(1)
-        Part_List.removeAt(2)
+        Part_List.removeAt(0)
+        Part_List.removeAt(0)
 
         root.leaderboard_recycler.adapter=PeoplesAdapter(Part_List)
 
@@ -53,70 +53,56 @@ class DashboardFragment : Fragment() {
             People(
                 "Aborayes",
                 193.222,
-                R.drawable.das
+                R.drawable.aboraya
             )
         )
         p.add(
             People(
                 "Etch",
                 191.222,
-                R.drawable.das
+                R.drawable.etch
             )
         )
         p.add(
             People(
                 "Kirdy",
                 190.222,
-                R.drawable.das
-            )
-        )
-        p.add(
-            People(
-                "Omda",
-                189.222,
-                R.drawable.das
-            )
-        )
-        p.add(
-            People(
-                "Zizo",
-                188.222,
-                R.drawable.das
+                R.drawable.kordy
             )
         )
         p.add(
             People(
                 "Assoum",
-                160.222,
-                R.drawable.das
+                189.222,
+                R.drawable.assoum
+            )
+        )
+        p.add(
+            People(
+                "Omda",
+                188.222,
+                R.drawable.omd
+            )
+        )
+        p.add(
+            People(
+                "Zizo",
+                187.222,
+                R.drawable.zead
             )
         )
         p.add(
             People(
                 "Pep",
                 150.222,
-                R.drawable.das
+                R.drawable.pep
             )
         )
         p.add(
             People(
-                "Shebo",
+                "Shamosa",
                 130.222,
-                R.drawable.das
-            )
-        )
-        p.add(
-            People(
-                "max",
-                120.222,
-                R.drawable.das
-            )
-        )
-        p.add(
-            People(
-                "Salah",
-                110.222,
-                R.drawable.das
+                R.drawable.shams
             )
         )
         return p
