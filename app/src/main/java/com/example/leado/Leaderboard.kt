@@ -26,7 +26,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Aborayes",
                 193.222,
-                1,
                 R.drawable.das
             )
         )
@@ -34,7 +33,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Etch",
                 191.222,
-                2,
                 R.drawable.das
             )
         )
@@ -42,7 +40,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Kirdy",
                 190.222,
-                3,
                 R.drawable.das
             )
         )
@@ -50,7 +47,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Omda",
                 189.222,
-                4,
                 R.drawable.das
             )
         )
@@ -58,7 +54,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Zizo",
                 188.222,
-                5,
                 R.drawable.das
             )
         )
@@ -66,7 +61,6 @@ class Leaderboard : AppCompatActivity() {
             People(
                 "Assoum",
                 160.222,
-                6,
                 R.drawable.das
             )
         )

@@ -7,18 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="unlabeled"/>
 
     <ImageView
         android:id="@+id/pp_left"
@@ -135,6 +123,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Daily Motivation"
                 android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView7"
                 app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
@@ -147,6 +136,8 @@
                 android:text="@string/do_not_wait_the_time_will_never_be_just_right_start_where_you_stand_and_work_with_whatever_tools_you_may_have_at_your_command_and_better_tools_will_be_found_as_you_go_along_george_herbert"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
