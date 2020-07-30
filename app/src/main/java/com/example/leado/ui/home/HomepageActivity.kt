@@ -1,11 +1,17 @@
 package com.example.leado.ui.home
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import com.example.leado.R
-import com.example.leado.adapters.CoursesAdapter
-import com.example.leado.models.Course
-import kotlinx.android.synthetic.main.temp_homepage.*
+import com.example.leado.models.Badge
+import com.example.leado.ui.profile.AboutMe
+import com.example.leado.ui.profile.Badges
+import com.example.leado.ui.profile.MyCourses
+import com.example.leado.ui.profile.MyFriends
+import kotlinx.android.synthetic.main.activity_friend.*
 
 class HomepageActivity : AppCompatActivity()
 {
@@ -13,13 +19,6 @@ class HomepageActivity : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.temp_homepage)
-
-        var items: MutableList<Course> = ArrayList()
-        items.add(Course("Personal Branding"))
-        items.add(Course("Mind Mapping"))
-        items.add(Course("Self Awareness"))
-
-        recyclerView.adapter = CoursesAdapter(items)
+        setContentView(R.layout.activity_friend)
     }
 }
