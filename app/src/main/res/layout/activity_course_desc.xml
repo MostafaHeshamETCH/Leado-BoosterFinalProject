@@ -20,12 +20,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:layout_marginTop="20dp"
         android:id="@+id/imageView13"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         android:background="@drawable/bottom_layout_leaderboard"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
 
     <TextView
         android:id="@+id/textView25"
@@ -40,8 +42,9 @@
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lessonRV"
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="0dp"
         android:layout_marginTop="15dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -123,28 +126,32 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="270dp"
+        android:id="@+id/start_btn"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat_semibold"
+        android:layout_marginStart="10dp"
         android:text="Start"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/save_btn"
         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
     <ImageView
-        android:layout_width="100dp"
+        android:id="@+id/save_btn"
+        android:layout_width="90dp"
         android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/button2"
-        android:src="@drawable/ic_save"
         android:padding="10dp"
+        android:src="@drawable/ic_save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 

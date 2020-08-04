@@ -1,6 +1,7 @@
 package com.example.leado.models
 
 data class Course(
-    var name: String
-) {
-}
+    val name: String,
+    val lessons: List<Lesson>,
+    var lessonsNum: Int? = null
+)

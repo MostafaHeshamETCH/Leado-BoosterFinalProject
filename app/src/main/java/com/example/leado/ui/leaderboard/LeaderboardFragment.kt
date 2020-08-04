@@ -1,53 +1,55 @@
-package com.example.leado.ui.dashboard
+package com.example.leado.ui.leaderboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.leado.R
 import com.example.leado.adapters.PeoplesAdapter
 import com.example.leado.models.People
-import kotlinx.android.synthetic.main.fragment_dashboard.*
-import kotlinx.android.synthetic.main.fragment_dashboard.view.*
+import kotlinx.android.synthetic.main.fragment_leaderboard.*
 
 
-class DashboardFragment : Fragment() {
+class LeaderboardFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var leaderboardViewModel: LeaderboardViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        leaderboardViewModel =
+            ViewModelProviders.of(this).get(LeaderboardViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_leaderboard, container, false)
+        leaderboardViewModel.text.observe(viewLifecycleOwner, Observer {
         })
-        val Full_List=getPeople()
-        val first_img=Full_List.get(0).image
-        val second_img=Full_List.get(1).image
-        val third_img=Full_List.get(2).image
-        val image1 = root.findViewById(R.id.user_1st_pp) as ImageView
-        image1.setImageResource(first_img)
-        val image2 = root.findViewById(R.id.user_2nd_pp) as ImageView
-        image2.setImageResource(second_img)
-        val image3 = root.findViewById(R.id.user_3rd_pp) as ImageView
-        image3.setImageResource(third_img)
-        val Part_List=Full_List
-        Part_List.removeAt(0)
-        Part_List.removeAt(0)
-        Part_List.removeAt(0)
-
-        root.leaderboard_recycler.adapter=PeoplesAdapter(Part_List)
-
         return root
     }
-    fun getPeople():ArrayList<People>{
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val fullList = getPeople()
+
+        val firstImg = fullList[0].image
+        val secondImg = fullList[1].image
+        val thirdImg = fullList[2].image
+
+        this.user_1st_pp.setImageResource(firstImg)
+        this.user_2nd_pp.setImageResource(secondImg)
+        this.user_3rd_pp.setImageResource(thirdImg)
+
+        fullList.removeAt(0)
+        fullList.removeAt(0)
+        fullList.removeAt(0)
+
+        leaderboard_recycler.adapter=PeoplesAdapter(fullList)
+    }
+
+    private fun getPeople():ArrayList<People>{
         val p:ArrayList<People> = ArrayList()
         p.add(
             People(

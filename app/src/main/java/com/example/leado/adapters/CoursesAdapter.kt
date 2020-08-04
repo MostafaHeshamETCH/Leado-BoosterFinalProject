@@ -1,5 +1,8 @@
 package com.example.leado.adapters
 
+import android.content.Intent
+import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +10,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
 import com.example.leado.models.Course
+import com.example.leado.models.Lesson
+import com.example.leado.ui.coursedescription.CourseDesc
 import kotlinx.android.synthetic.main.course_item.view.*
-
+import java.util.ArrayList
 
 class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
@@ -52,6 +57,17 @@ class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<Rec
         init
         {
             itemView.setOnClickListener{
+                val i = Intent(itemView.context, CourseDesc::class.java)
+
+                i.putExtra("CourseName", course?.name)
+
+                val bundle = Bundle()
+
+                bundle.putParcelableArrayList("Lessons", course?.lessons as ArrayList<out Parcelable>)
+
+                i.putExtras(bundle)
+
+                itemView.context.startActivity(i)
             }
         }
     }
