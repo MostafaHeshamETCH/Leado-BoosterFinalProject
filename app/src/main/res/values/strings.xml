@@ -6,6 +6,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="do_not_wait_the_time_will_never_be_just_right_start_where_you_stand_and_work_with_whatever_tools_you_may_have_at_your_command_and_better_tools_will_be_found_as_you_go_along_george_herbert">“Do not wait; the time will never be ‘just right.’ Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.” —George Herbert</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up_underlined"><u>Sign Up</u></string>
 </resources>

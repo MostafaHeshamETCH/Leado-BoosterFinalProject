@@ -1,8 +1,5 @@
 package com.example.leado.adapters
 
-import android.content.Intent
-import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,18 +7,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
 import com.example.leado.models.Course
-import com.example.leado.models.Lesson
-import com.example.leado.ui.coursedescription.CourseDesc
+import com.example.leado.models.People
 import kotlinx.android.synthetic.main.course_item.view.*
-import java.util.ArrayList
+import kotlinx.android.synthetic.main.user_item2.view.*
 
-class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
+
+class FriendsAdaptor(private var items: List<People>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
     {
         return BlogViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.course_item,
+                R.layout.user_item2,
                 parent,
                 false
             )
@@ -35,7 +32,7 @@ class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<Rec
             is BlogViewHolder ->
             {
                 holder.bind(items[position])
-                holder.course = items[position]
+                holder.people = items[position]
             }
         }
     }
@@ -45,29 +42,22 @@ class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<Rec
         return items.size
     }
 
-    class BlogViewHolder constructor(itemView: View, var course: Course? = null):RecyclerView.ViewHolder(itemView)
+    class BlogViewHolder constructor(itemView: View, var people: People? = null):RecyclerView.ViewHolder(itemView)
     {
-        private var courseName: TextView = itemView.course_name
+        private var name: TextView = itemView.user_name
+        private var image = itemView.user_pp
+        private var score = itemView.user_score
 
-        fun bind(course: Course)
+        fun bind(people: People)
         {
-            courseName.text = course.name
+            name.text = people.name
+            image.setImageResource(people.image)
+            score.text = people.score.toString()
         }
 
         init
         {
             itemView.setOnClickListener{
-                val i = Intent(itemView.context, CourseDesc::class.java)
-
-                i.putExtra("CourseName", course?.name)
-
-                val bundle = Bundle()
-
-                bundle.putParcelableArrayList("Lessons", course?.lessons as ArrayList<out Parcelable>)
-
-                i.putExtras(bundle)
-
-                itemView.context.startActivity(i)
             }
         }
     }

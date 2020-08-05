@@ -2,42 +2,46 @@ package com.example.leado.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.RecyclerView
-import com.example.leado.Leaderboard
 import com.example.leado.R
-import com.example.leado.adapters.CoursesAdapter
-import com.example.leado.models.Course
-import com.example.leado.ui.dashboard.DashboardFragment
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.temp_homepage.*
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.leado.ui.leaderboard.LeaderboardFragment
+import com.example.leado.ui.profile.ProfileFragmentMain
+import com.example.leado.ui.search.SearchFragment
+import kotlinx.android.synthetic.main.activity_homepage.*
 
-class HomepageActivity : AppCompatActivity() {
+class HomepageActivity : AppCompatActivity()
+{
 
-    lateinit var homeFragment: HomeFragment
-    lateinit var dashboardFragment: DashboardFragment
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var leaderboardFragment: LeaderboardFragment
+    private lateinit var profileFragment: ProfileFragmentMain
+    private lateinit var searchFragment: SearchFragment
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
-        homeFragment = HomeFragment()
-        dashboardFragment = DashboardFragment()
+        supportActionBar?.hide()
 
-        val btm: BottomNavigationView = findViewById(R.id.nav_view)
-        btm.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.nav_host_fragment, homeFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
+        homeFragment= HomeFragment()
+        leaderboardFragment= LeaderboardFragment()
+        profileFragment = ProfileFragmentMain()
+        searchFragment = SearchFragment()
+
+        nav_view.setOnNavigationItemSelectedListener { item->
+            when(item.itemId){
+                R.id.navigation_home->{
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,homeFragment).commit()
                 }
-                R.id.navigation_notifications -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.nav_host_fragment, dashboardFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
+                R.id.navigation_leaderboard->{
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,leaderboardFragment).commit()
+                }
+                R.id.navigation_profile->{
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,profileFragment).commit()
+                }
+                R.id.navigation_search->{
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,searchFragment).commit()
                 }
             }
             true
