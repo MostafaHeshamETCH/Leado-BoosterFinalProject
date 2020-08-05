@@ -9,8 +9,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_pp"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/kordy"
         android:layout_marginLeft="8dp"

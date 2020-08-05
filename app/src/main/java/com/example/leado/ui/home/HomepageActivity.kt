@@ -15,31 +15,32 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.temp_homepage.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
-class HomepageActivity : AppCompatActivity()
-{
+class HomepageActivity : AppCompatActivity() {
 
     lateinit var homeFragment: HomeFragment
     lateinit var dashboardFragment: DashboardFragment
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
-        supportActionBar?.hide()
-        homeFragment= HomeFragment()
-        dashboardFragment= DashboardFragment()
+        homeFragment = HomeFragment()
+        dashboardFragment = DashboardFragment()
 
         val btm: BottomNavigationView = findViewById(R.id.nav_view)
-        btm.setOnNavigationItemSelectedListener { item->
-            when(item.itemId){
-                R.id.navigation_home->{
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,homeFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
+        btm.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, homeFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
-                R.id.navigation_notifications->{
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,dashboardFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
+                R.id.navigation_notifications -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, dashboardFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
             }
-          true
+            true
         }
     }
 }
