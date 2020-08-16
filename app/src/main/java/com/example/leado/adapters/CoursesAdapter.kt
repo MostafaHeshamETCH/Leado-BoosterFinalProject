@@ -12,6 +12,7 @@ import com.example.leado.R
 import com.example.leado.models.Course
 import com.example.leado.models.Lesson
 import com.example.leado.ui.coursedescription.CourseDesc
+import kotlinx.android.synthetic.main.activity_course_desc.view.*
 import kotlinx.android.synthetic.main.course_item.view.*
 import java.util.ArrayList
 
@@ -60,6 +61,8 @@ class CoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<Rec
                 val i = Intent(itemView.context, CourseDesc::class.java)
 
                 i.putExtra("CourseName", course?.name)
+                i.putExtra("CourseRate",course?.rating.toString())
+                i.putExtra("CourseNum",course?.numTaken.toString())
 
                 val bundle = Bundle()
 
