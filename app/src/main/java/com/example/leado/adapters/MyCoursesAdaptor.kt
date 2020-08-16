@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
 import com.example.leado.models.Course
 import kotlinx.android.synthetic.main.course_item.view.*
+import kotlinx.android.synthetic.main.course_item.view.course_name
+import kotlinx.android.synthetic.main.mycourses_item.view.*
 
 
 class MyCoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
@@ -43,10 +45,13 @@ class MyCoursesAdapter(private var items: List<Course>) : RecyclerView.Adapter<R
     class BlogViewHolder constructor(itemView: View, var course: Course? = null):RecyclerView.ViewHolder(itemView)
     {
         private var courseName: TextView = itemView.course_name
-
+        private var genre: TextView = itemView.genre
+        private var progress: TextView = itemView.progress
         fun bind(course: Course)
         {
             courseName.text = course.name
+            genre.text=course.genre
+            progress.text=course.progress.toString()+"%"
         }
 
         init

@@ -14,6 +14,8 @@ class CourseDesc : AppCompatActivity() {
         setContentView(R.layout.activity_course_desc)
 
         course_name_in_desc.text = intent.getStringExtra("CourseName")
+        course_rating.text = intent.getStringExtra("CourseRate")
+        course_taken_num.text=intent.getStringExtra("CourseNum")+"K"
 
         val lessons = intent.extras?.getParcelableArrayList<Lesson>("Lessons")
 

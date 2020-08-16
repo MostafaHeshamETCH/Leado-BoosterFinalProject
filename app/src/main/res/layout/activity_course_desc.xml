@@ -83,38 +83,42 @@
         android:id="@+id/course_taken_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat_regular"
         android:text="12k"
         android:textColor="#fff"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+        app:layout_constraintTop_toTopOf="@+id/imageView14"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="12dp"
         android:src="@drawable/ic_star"
         app:layout_constraintBottom_toBottomOf="@+id/course_taken_num"
         app:layout_constraintStart_toEndOf="@+id/course_taken_num"
-        app:layout_constraintTop_toTopOf="@+id/course_taken_num" />
+        app:layout_constraintTop_toTopOf="@+id/course_taken_num"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/course_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/montserrat_regular"
         android:text="4.9"
         android:textColor="#fff"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView15"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="@+id/imageView15"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView16"
