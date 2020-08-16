@@ -21,6 +21,12 @@ class MyFriends : Fragment()
         savedInstanceState: Bundle?
     ): View? {
 
+        friends.add(People("Pep",10000.0,R.drawable.pep))
+        friends.add(People("Kordy",20000.0,R.drawable.kordy))
+        friends.add(People("Aborayes",30000.0,R.drawable.aboraya))
+        friends.add(People("Eiso",40000.0,R.drawable.assoum))
+        friends.add(People("Omda",50000.0,R.drawable.omd))
+        friends.add(People("Merwaan",60000.0,R.drawable.pp))
         friends.add(People("Pep",10000.0,R.drawable.pp))
         friends.add(People("Kordy",20000.0,R.drawable.pp))
         friends.add(People("Aborayes",30000.0,R.drawable.pp))

@@ -1,11 +1,14 @@
 package com.example.leado.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.R
 import com.example.leado.models.Lesson
+import com.example.leado.ui.coursedescription.VideoPlayer
 import kotlinx.android.synthetic.main.course_lesson_item.view.*
 
 
@@ -55,6 +58,11 @@ class LessonsAdaptor(private var items: List<Lesson>) : RecyclerView.Adapter<Rec
         init
         {
             itemView.setOnClickListener{
+            }
+
+            itemView.video_btn.setOnClickListener {
+                val intent = Intent(itemView.context, VideoPlayer::class.java)
+                itemView.context.startActivity(intent)
             }
         }
     }

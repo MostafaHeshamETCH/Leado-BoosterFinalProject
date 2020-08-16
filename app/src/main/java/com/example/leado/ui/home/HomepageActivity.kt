@@ -16,10 +16,8 @@ class HomepageActivity : AppCompatActivity()
     private lateinit var profileFragment: ProfileFragmentMain
     private lateinit var searchFragment: SearchFragment
 
-
     override fun onCreate(savedInstanceState: Bundle?)
     {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
         supportActionBar?.hide()

@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="28dp"
@@ -156,6 +155,7 @@
         android:layout_marginTop="18dp"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        android:background="@drawable/frame_topcorner"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@ class FriendsAdaptor(private var items: List<People>) : RecyclerView.Adapter<Rec
     {
         return BlogViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.user_item2,
+                R.layout.item_myfriends,
                 parent,
                 false
             )

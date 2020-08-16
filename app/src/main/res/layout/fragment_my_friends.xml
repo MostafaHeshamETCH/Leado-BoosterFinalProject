@@ -10,8 +10,9 @@
         android:id="@+id/my_friends"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/user_item2"
+        tools:listitem="@layout/item_myfriends"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:background="@drawable/frame_topcorner"/>
 
 </FrameLayout>
