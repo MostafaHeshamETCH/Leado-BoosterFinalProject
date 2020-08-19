@@ -9,7 +9,7 @@ import com.example.leado.R
 import com.example.leado.models.Course
 import com.example.leado.models.People
 import kotlinx.android.synthetic.main.course_item.view.*
-import kotlinx.android.synthetic.main.user_item2.view.*
+import kotlinx.android.synthetic.main.item_user.view.*
 
 
 class FriendsAdaptor(private var items: List<People>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()

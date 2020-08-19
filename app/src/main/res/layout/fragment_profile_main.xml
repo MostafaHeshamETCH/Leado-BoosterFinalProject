@@ -74,7 +74,7 @@
     <HorizontalScrollView
         android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_height="0dp"
         android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
@@ -153,9 +153,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        android:background="@drawable/frame_topcorner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        android:background="@drawable/frame_topcorner"/>
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

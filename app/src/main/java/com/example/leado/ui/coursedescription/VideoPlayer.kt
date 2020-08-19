@@ -19,6 +19,9 @@ class VideoPlayer : AppCompatActivity() {
         videoView.setMediaController(mediaController)
         videoView.start()
 
+        lesson_name_in_video_player.text = intent.getStringExtra("LessonName")
+        lesson_num_in_video_player.text = intent.getStringExtra("LessonOrder")
+        lesson_time.text = intent.getStringExtra("LessonTime")
 
         heart_btn.setOnClickListener {
             heart_btn.setImageResource(R.drawable.ic_heart_red)

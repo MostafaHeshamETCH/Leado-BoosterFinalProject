@@ -62,6 +62,11 @@ class LessonsAdaptor(private var items: List<Lesson>) : RecyclerView.Adapter<Rec
 
             itemView.video_btn.setOnClickListener {
                 val intent = Intent(itemView.context, VideoPlayer::class.java)
+
+                intent.putExtra("LessonName", lesson?.name)
+                intent.putExtra("LessonTime", (lesson?.time).toString())
+                intent.putExtra("LessonOrder", lesson?.order)
+
                 itemView.context.startActivity(intent)
             }
         }

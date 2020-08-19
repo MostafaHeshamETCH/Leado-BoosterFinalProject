@@ -40,16 +40,18 @@
 
        <TextView
            android:id="@+id/user_name"
-           android:layout_width="170dp"
-           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_marginEnd="10dp"
+           android:layout_height="25dp"
+           android:layout_margin="15dp"
            android:fontFamily="@font/montserrat_semibold"
            android:text="Omar Mankash"
+           android:textColor="#ffffff"
            android:textSize="18sp"
-           android:layout_margin="15dp"
            app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toStartOf="@+id/user_score"
            app:layout_constraintStart_toEndOf="@+id/user_pp"
-           app:layout_constraintTop_toTopOf="parent"
-           android:textColor="#ffffff" />
+           app:layout_constraintTop_toTopOf="parent" />
 
        <TextView
            android:id="@+id/user_score"

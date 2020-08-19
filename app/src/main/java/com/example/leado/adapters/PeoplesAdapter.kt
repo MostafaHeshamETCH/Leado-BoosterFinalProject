@@ -1,5 +1,4 @@
 package com.example.leado.adapters
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,13 +6,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leado.models.People
 import com.example.leado.R
-import kotlinx.android.synthetic.main.user_item.view.*
-import kotlinx.android.synthetic.main.user_item2.view.*
+import kotlinx.android.synthetic.main.item_user.view.*
 
 class PeoplesAdapter(val list:ArrayList<People>) : RecyclerView.Adapter<PeoplesAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-       val layoutinflater=LayoutInflater.from(parent.context).inflate(R.layout.user_item2,parent,false)
+       val layoutinflater=LayoutInflater.from(parent.context).inflate(R.layout.item_user,parent,false)
         return viewHolder(layoutinflater)
     }
 

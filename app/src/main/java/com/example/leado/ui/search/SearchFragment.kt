@@ -25,7 +25,6 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         val prog1 = ArrayList<Lesson>()
         prog1.add(Lesson("Introduction", 1, "28:12", "01"))
         prog1.add(Lesson("Variables declaration, Arithmetic Operations", 2, "49:17", "02"))
@@ -65,13 +64,32 @@ class SearchFragment : Fragment() {
 
         recentlyRV.adapter = CoursesAdapter(recentList)
 
-       /* val recommendList = ArrayList<Course>()
-        recommendList.add(Course("Data Structure", personalBrandingLessons))
-        recommendList.add(Course("Artificial Intelligence", personalBrandingLessons))
-        recommendList.add(Course("Machine Learning", personalBrandingLessons))
-        recommendList.add(Course("Security", personalBrandingLessons))
+        val EmbeddedSystems = ArrayList<Lesson>()
+        EmbeddedSystems.add(Lesson("Introduction to Embedded System", 1, "18:12", "01"))
+        EmbeddedSystems.add(Lesson("Full C programming", 2, "39:17", "02"))
+        EmbeddedSystems.add(Lesson("Data Structures and algorithms", 3, "2:19:57", "03"))
+        EmbeddedSystems.add(Lesson("Software", 4, "41:29", "04"))
+        EmbeddedSystems.add(Lesson("MicroController", 4, "51:29", "05"))
 
-        recommendedRV.adapter = CoursesAdapter(recommendList)*/
+        val GraphicDesign = ArrayList<Lesson>()
+        GraphicDesign.add(Lesson("Introduction to Graphic Design", 1, "18:12", "01"))
+        GraphicDesign.add(Lesson("Design Basics", 2, "39:17", "02"))
+        GraphicDesign.add(Lesson("Introduction to Typography", 3, "2:19:57", "03"))
+        GraphicDesign.add(Lesson("Advanced Typography", 4, "41:29", "04"))
+
+        val Finance = ArrayList<Lesson>()
+        Finance.add(Lesson("Introduction to the Foundations of Financial Management", 1, "18:12", "01"))
+        Finance.add(Lesson("The Financial Markets and Interest Rates", 2, "39:17", "02"))
+        Finance.add(Lesson("Financial States", 3, "2:19:57", "03"))
+        Finance.add(Lesson("Time Value of Money", 4, "41:29", "04"))
+
+       val recommendList = ArrayList<Course>()
+        recommendList.add(Course("Finance", Finance, 4,90, 3.8))
+        recommendList.add(Course("Graphic Desgin", GraphicDesign, 4, 120, 4.3))
+        recommendList.add(Course("Physics 1", phy1,5,83,4.7))
+        recommendList.add(Course("Advanced Programming", prog2,6,60,3.9))
+
+        recommendedRV.adapter = CoursesAdapter(recommendList)
     }
 
 }
